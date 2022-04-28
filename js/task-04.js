@@ -4,8 +4,9 @@ const valueEl = document.querySelector("#value");
 
 let counterValue = 0
 
-decrementBtn.addEventListener('click', decrement)
-incrementBtn.addEventListener('click', increment);
+function changeValueEl(number) {
+    valueEl.textContent = number
+}
 
 function decrement() {
     counterValue -= 1
@@ -17,6 +18,5 @@ function increment() {
     changeValueEl(counterValue)
 }
 
-function changeValueEl(number) {
-    valueEl.textContent = number
-}
+decrementBtn.addEventListener('click', decrement)
+incrementBtn.addEventListener('click', increment);
